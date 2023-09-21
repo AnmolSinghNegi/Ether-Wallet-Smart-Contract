@@ -10,7 +10,7 @@ contract Wallet{
     }//storing ether;
     function sendEther(address payable receiver,uint amount)public{
         require(msg.sender==owner,"Only owner can send ether to other account");
-        amount=amount*10**18;//wei to ether
+        amount=amount;
         receiver.transfer(amount);
     }
     function balanceof()public view returns(uint balance){
